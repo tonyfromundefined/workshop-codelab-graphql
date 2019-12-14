@@ -7,8 +7,10 @@ function main() {
 
   app.listen(3000, () => {
     if (isProd) {
+      /* tslint:disable-next-line */
       console.log('[\x1B[36mINFO\x1B[0m] Server is running on http://localhost:3000 in production mode')
     } else {
+      /* tslint:disable-next-line */
       console.log('[\x1B[36mINFO\x1B[0m] Server is running on http://localhost:3000 in development mode')
     }
   })

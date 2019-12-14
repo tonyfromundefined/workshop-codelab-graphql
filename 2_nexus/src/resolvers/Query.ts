@@ -7,5 +7,5 @@ export const Query = queryType({
         return 'pong'
       },
     })
-  }
+  },
 })

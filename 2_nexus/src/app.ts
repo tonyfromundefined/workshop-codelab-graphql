@@ -4,9 +4,9 @@ import { ParamsDictionary } from 'express-serve-static-core'
 import fs from 'fs'
 import { GraphQLNamedType } from 'graphql'
 import { makeSchema } from 'nexus'
+import { TypegenConfigSourceModule } from 'nexus/dist/core'
 import path from 'path'
 import * as resolvers from './resolvers'
-import { TypegenConfigSourceModule } from 'nexus/dist/core'
 
 const __root = path.resolve(__dirname, '../')
 const __generated = path.resolve(__root, './src/generated')

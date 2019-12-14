@@ -5,7 +5,7 @@
  * JavaScript로 가상의 DB를 직접 구현합니다.
  */
 
-export type User = {
+export interface User {
   id: string
   name: string
   imageUrl: string
