@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "NODE_ENV=production node dist/index.js"
+  },
   "devDependencies": {
     "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "ts-node-dev": "^1.0.0-pre.44"
   }
 }
