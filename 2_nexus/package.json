@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
-    "apollo-server": "^2.9.13",
+    "apollo-server-express": "^2.9.13",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
     "nexus": "^0.12.0-rc.5"
