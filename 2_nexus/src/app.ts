@@ -8,6 +8,10 @@ import path from 'path'
 import * as resolvers from './resolvers'
 import { TypegenConfigSourceModule } from 'nexus/dist/core'
 
+const __root = path.resolve(__dirname, '../')
+const __generated = path.resolve(__root, './src/generated')
+const __models = path.resolve(__root, './src/models')
+
 /**
  * 서버 어플리케이션을 생성합니다
  */
@@ -32,8 +36,8 @@ function createApolloServer() {
       resolvers,
     },
     outputs: {
-      schema: path.resolve(__dirname, './generated', 'schema.graphql'),
-      typegen: path.resolve(__dirname, './generated', 'nexus.ts'),
+      schema: path.resolve(__generated, 'schema.graphql'),
+      typegen: path.resolve(__generated, 'nexus.ts'),
     },
     typegenAutoConfig: {
       sources: createTypegenConfigSources(),
@@ -62,12 +66,12 @@ declare global {
  */
 function createTypegenConfigSources() {
   const sources: TypegenConfigSourceModule[] = []
-  const modelFilenames = fs.readdirSync(path.resolve(__dirname, './models'))
+  const modelFilenames = fs.readdirSync(__models)
 
   for (const filename of modelFilenames) {
     sources.push({
       alias: path.parse(filename).name,
-      source: path.resolve(__dirname, './models', filename),
+      source: path.resolve(__models, filename),
       typeMatch(type: GraphQLNamedType) {
         return new RegExp(`(?:class|interface|type)\\s+(${type.name})\\W`)
       },

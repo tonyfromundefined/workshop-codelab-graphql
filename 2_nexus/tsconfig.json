@@ -16,6 +16,7 @@
       "~/*": ["./*"]
     },
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "removeComments": true
   }
 }
