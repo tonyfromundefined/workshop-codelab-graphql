@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
+    "dev": "NODE_ENV=development ts-node-dev --respawn src/index.ts",
     "build": "tsc",
     "start": "NODE_ENV=production node dist/index.js"
   },
