@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development ts-node-dev src/index.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn src/index.ts",
     "build": "tsc",
     "start": "cross-env NODE_ENV=production node dist/index.js"
   },
