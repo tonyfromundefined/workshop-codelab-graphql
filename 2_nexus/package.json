@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev src/index.ts",
     "build": "tsc",
-    "start": "NODE_ENV=production node dist/index.js"
+    "start": "cross-env NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
     "apollo-server-express": "^2.9.13",
+    "cross-env": "^6.0.3",
     "express": "^4.17.1",
     "graphql": "^14.5.8",
     "nexus": "^0.12.0-rc.5"
