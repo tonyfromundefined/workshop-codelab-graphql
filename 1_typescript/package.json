@@ -4,13 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development ts-node-dev src/index.ts",
+    "dev": "cross-env NODE_ENV=development ts-node-dev --respawn src/index.ts",
     "build": "tsc",
-    "start": "NODE_ENV=production node dist/index.js"
+    "start": "cross-env NODE_ENV=production node dist/index.js"
   },
   "devDependencies": {
     "ts-node-dev": "^1.0.0-pre.44",
     "tslint": "^5.20.1",
     "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "cross-env": "^6.0.3"
   }
 }
