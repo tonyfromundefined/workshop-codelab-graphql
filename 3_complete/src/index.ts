@@ -1,0 +1,19 @@
+import { createApp } from './app'
+
+const isProd = process.env.NODE_ENV === 'production'
+
+function main() {
+  const app = createApp()
+
+  app.listen(3000, () => {
+    if (isProd) {
+      /* tslint:disable-next-line */
+      console.log('[\x1B[36mINFO\x1B[0m] Server is running on http://localhost:3000/graphql in production mode')
+    } else {
+      /* tslint:disable-next-line */
+      console.log('[\x1B[36mINFO\x1B[0m] Server is running on http://localhost:3000/graphql in development mode')
+    }
+  })
+}
+
+main()
