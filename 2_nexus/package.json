@@ -11,7 +11,7 @@
   "dependencies": {
     "apollo-server-express": "^2.9.13",
     "cross-env": "^6.0.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^14.5.8",
     "nexus": "^0.12.0-rc.5"
   },
